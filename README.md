@@ -50,6 +50,7 @@ URLs                encodeURIComponent()
 A defense-in-depth HTTP header that limits what can execute in the browser even if XSS slips through.
 Content-Security-Policy: default-src 'self'; script-src 'self'
 
+
 # Common Pitfalls
 # Sanitizing on the client only 
 trivially bypassed; always sanitize server-side
