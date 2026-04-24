@@ -19,9 +19,10 @@ jsconst sanitized = input
 Use a well-tested library (e.g., DOMPurify for HTML, he for entity encoding) rather than rolling your own.
 
 3. Use Parameterized Queries (Never Interpolate into SQL)
-BAD
+ BAD
 cursor.execute(f"SELECT * FROM users WHERE name = '{user_input}'")
-GOOD
+
+ GOOD
 cursor.execute("SELECT * FROM users WHERE name = %s", (user_input,))
 
 This is the canonical defense against SQL injection — sanitizing the string itself is the wrong approach here.
