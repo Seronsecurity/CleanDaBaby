@@ -38,7 +38,7 @@ jsconst normalized = input.normalize("NFC").trim();
 
 6. Context-Specific Escaping at Output
 Sanitize once on input; escape at the point of use based on context:
-# Output Context    Defense
+Output Context      Defense
 HTML body           HTML entity encoding
 HTML attribute      Attribute encoding
 JavaScript          JS string escaping
